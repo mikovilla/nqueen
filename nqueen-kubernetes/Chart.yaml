@@ -1,0 +1,5 @@
+apiVersion: v2
+name: nqueen
+description: Helm chart for deploying NQueen and NKnight Solver
+version: 0.1.0
+appVersion: 1.0.0

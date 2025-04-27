@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: nqueen-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+app:
+  name: nqueen
+  entryPoint: ["dotnet", "/app/nqueen.Main.dll"]
+
+resources:
+  requests:
+    cpu: "250m"
+    memory: "512Mi"
+  limits:
+    cpu: "500m"
+    memory: "1Gi"
+
+env:
+  APP_UID: 1000

@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nqueen-config
+data:
+  APP_UID: "{{ .Values.env.APP_UID }}"
